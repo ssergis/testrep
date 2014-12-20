@@ -62,7 +62,7 @@
                     "stop": []
                 },
                 "memory": {
-                    "max_required": "",
+                    "max_required": "1024",
                     "min_required": ""
                 },
                 "os": "ubuntu",
