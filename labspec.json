@@ -1,0 +1,78 @@
+{
+    "lab": {
+      "description": {
+            "id": "lab1",
+            "name": "my_lab",
+            "discipline": ["physics"],
+            "status": "final",
+            "type": "vlab",
+            "integration_level": 0,
+            "server-side": true,
+            "developer": [
+                {
+                    "contact": {
+                        "email": "d#saef.cion",
+                        "alternate_email": "asdfasdf",
+                        "mobile_number": "33323234",
+                        "office_number": "231242342"
+                    },
+                    "department": "koko",
+                    "institute": "trasa",
+                    "name": "asdf",
+                    "organization": "orgasdf",
+                    "role": "teacher",
+                    "title": "Dr",
+                    "web": "www.ffff.com"
+                }
+            ]
+        },
+        "build_requirements": {
+            "platform": {
+                "arch": "i386", 
+                "build_steps": {
+                    "build": ["make -C ../src"],
+                    "configure": [],
+                    "post_build": [],
+                    "pre_build": [],
+                    "status": []
+                },
+                "installer": [],
+                "os": "ubuntu",
+                "osVersion": "12",
+                "service_pack": ""
+            }
+        },
+        "runtime_requirements": {
+            "platform": {
+                "arch": "i386",
+                "hosting": "dedicated",
+                "installer": ["sudo apt-get update", "sudo apt-get install -y apache2"],
+                "lab_actions": {
+                    "backup": [],
+                    "clean": [],
+                    "init": ["mv /var/www/index.html index.html.default", "cp -r ../src/* /var/www/"],
+                    "pause": [],
+                    "publish": [],
+                    "restore": ["restore"],
+                    "resume": [],
+                    "shutdown": ["service apache2 stop"],
+           		 "start": ["service apache2 start"],
+                    
+                    "stats": [],
+                    "stop": []
+                },
+                "memory": {
+                    "max_required": "",
+                    "min_required": ""
+                },
+                "os": "ubuntu",
+                "osVersion": "12",
+                "servicepack": "",
+                "storage": {
+                    "min_required": ""
+                }
+            }
+        }
+    },
+    "template": "1.0"
+}
